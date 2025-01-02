@@ -1,0 +1,9 @@
+.pokidex-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0 auto;
+}
+.pokidex-wrapper h1 {
+  letter-spacing: 10px;
+}
