@@ -2,12 +2,13 @@
 import "./PokemonDetails.css";
 import { Link, useParams } from "react-router-dom";
 import usePokemon from "../../hooks/usePokemon";
+import Pokemon from "../Pokemon/Pokemon";
 
 function PokemonDetails() {
   const { id } = useParams();
 
-  // custom hook
-  const [pokemon] = usePokemon(id);
+  // custom hookk
+  const [pokemon, pokemonListState] = usePokemon(id);
 
   return (
     <>
@@ -36,6 +37,20 @@ function PokemonDetails() {
           </div>
         </div>
       )}
+      <div className="similer-pokemons">
+        <h1>Similer Pokemons</h1>
+        <div className="pokemon-similer-boxes">
+          {pokemonListState.pokemonList.length > 0 &&
+            pokemonListState.pokemonList.map((pokemon) => (
+              <Pokemon
+                name={pokemon.name}
+                key={pokemon.id}
+                url={pokemon.image}
+                id={pokemon.id}
+              />
+            ))}
+        </div>
+      </div>
     </>
   );
 }

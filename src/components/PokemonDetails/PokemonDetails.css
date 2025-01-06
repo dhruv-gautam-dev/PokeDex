@@ -32,3 +32,16 @@
   display: flex;
   gap:2rem
 }
+.similer-pokemons{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-top: 3rem;
+}
+.pokemon-similer-boxes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
