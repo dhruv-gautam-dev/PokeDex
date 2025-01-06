@@ -4,11 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import usePokemon from "../../hooks/usePokemon";
 import Pokemon from "../Pokemon/Pokemon";
 
-function PokemonDetails() {
-  const { id } = useParams();
-
+function PokemonDetails({ pokemonName }) {
   // custom hookk
-  const [pokemon, pokemonListState] = usePokemon(id);
+  const [pokemon, pokemonListState] = usePokemon(pokemonName);
 
   return (
     <>
